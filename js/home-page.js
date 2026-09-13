@@ -1,3 +1,3 @@
 document.addEventListener('DOMContentLoaded', () => {
-    hellu 
-})
+  // your home-page-only code goes here
+});

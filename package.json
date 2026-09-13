@@ -1,0 +1,12 @@
+{
+  "name": "hobby-tracker",
+  "version": "1.0.0",
+  "description": "Track your hobbies, save ideas to try, and keep personal how-to notes.",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^44.3.0"
+  }
+}

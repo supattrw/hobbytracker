@@ -15,8 +15,6 @@ body { font-family: sans-serif; line-height: 1.5; }
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  color: var(--light-purple);
-  cursor: pointer;
 }
 
 .nav-links {
@@ -37,7 +35,6 @@ body { font-family: sans-serif; line-height: 1.5; }
 .nav-link:hover {
   color: var(--dark-purple);
   background-color: var(--light-pink);
-  padding: 6px;
 }
 
 .nav-link.active {
@@ -49,8 +46,9 @@ body { font-family: sans-serif; line-height: 1.5; }
   display: none;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--light-purple);
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /* Mobile menu */
@@ -69,5 +67,5 @@ body { font-family: sans-serif; line-height: 1.5; }
   .nav-links li { padding: 0.5rem 1rem; }
 }
 
-main { padding: 0.5rem; }
+main { padding: 2rem; }
 footer { padding: 1rem 2rem; text-align: center; color: #777; }
