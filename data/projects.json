@@ -1,0 +1,26 @@
+{
+  "crochet": {
+    "latest": {
+      "title": "This is my latest work",
+      "status": [
+        { "label": "Time", "value": "2-3 weeks" },
+        { "label": "Needle", "value": "2.0mm" },
+        { "label": "Color", "value": "off-white" },
+        { "label": "Yarn", "value": "probably 4/4" },
+        { "label": "Rating", "value": "4/5" }
+      ],
+      "description": "I used around 2-3 weeks with this. Just worked on it whenever I could, or wanted to. It was so much joy once I remembered all the sequences. I played chicken with this yarn as well \u2014 since I bought it from Fretex, I didn't have extra yarn for this, but it ended up with a decent length so I'm satisfied!",
+      "image": "assets/crochet/belt.jpg",
+      "date": "2026-09-10T00:00:00.000Z"
+    },
+    "history": [
+      { "image": "assets/crochet/bandana.jpg", "title": "Bandana" },
+      { "image": "assets/crochet/airpod-bag.jpg", "title": "Airpod case" },
+      { "image": "assets/crochet/yarn-bag.jpg", "title": "Yarn storage bag" },
+      { "image": "assets/crochet/cat.jpg", "title": "Cat, mini try-out" }
+    ]
+  },
+  "nails-art": { "latest": null, "history": [] },
+  "ceramic": { "latest": null, "history": [] },
+  "accessories-making": { "latest": null, "history": [] }
+}

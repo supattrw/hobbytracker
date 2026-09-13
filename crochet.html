@@ -6,13 +6,27 @@
   <title>Hobby Tracker - Crochet</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-category="crochet">
 
   <div id="navbar-placeholder"></div>
 
   <main>
-    <h1>Crochet</h1>
-    <p>Content goes here.</p>
+    <div class="page-content">
+      <div class="two-column-layout">
+        <div>
+          <img src="" alt="" class="show-off-image">
+        </div>
+        <div class="project-details">
+          <h1></h1>
+          <h2>Status</h2>
+          <ul></ul>
+          <p></p>
+          <button type="button" id="edit-project-btn" class="secondary-btn" style="display:none;">Edit project</button>
+        </div>
+      </div>
+
+      <div class="image-container"></div>
+    </div>
   </main>
 
   <footer>
@@ -20,6 +34,7 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/crochet.js"></script>
+  <script src="js/project-modal.js"></script>
+  <script src="js/project-page.js"></script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
 /* Basic reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -6,15 +8,20 @@
     --light-purple: #AD88C6;
     --dark-pink: #E1AFD1;
     --light-pink: #FFE6E6;
+    --off-white: #FFF9F9; 
 }
-body { font-family: sans-serif; line-height: 1.5; }
+body { font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; line-height: 1.0; background-color: var(--off-white);}
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--light-pink);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
 .nav-links {
@@ -69,3 +76,330 @@ body { font-family: sans-serif; line-height: 1.5; }
 
 main { padding: 2rem; }
 footer { padding: 1rem 2rem; text-align: center; color: #777; }
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Project detail pages (crochet, ceramic, etc.) */
+.two-column-layout {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.two-column-layout > div {
+  flex: 1 1 320px;
+}
+
+.show-off-image {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.project-details h1 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  color: var(--dark-purple);
+}
+
+.project-details h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--light-purple);
+  margin-bottom: 0.75rem;
+}
+
+.project-details ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.project-details ul li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--light-pink);
+  max-width: 32ch;
+}
+
+.project-details p {
+  max-width: 60ch;
+  line-height: 1.7;
+  color: #333;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.image-container img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.15s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.03);
+}
+
+/* Click-to-enlarge images */
+main img {
+  cursor: zoom-in;
+}
+
+.image-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.image-overlay.open {
+  display: flex;
+}
+
+.image-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  cursor: default;
+}
+
+/* Buttons */
+.primary-btn,
+.secondary-btn {
+  display: inline-block;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.primary-btn {
+  background-color: var(--light-purple);
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+}
+
+.primary-btn:hover {
+  background-color: var(--dark-purple);
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: var(--dark-purple);
+  border: 1px solid var(--light-purple);
+  padding: 0.5rem 1rem;
+}
+
+.secondary-btn:hover {
+  background-color: var(--light-pink);
+}
+
+/* Homepage layout */
+.home-layout {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.home-left,
+.home-right {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.home-left {
+  order: 2;
+}
+
+.home-right {
+  order: 1;
+}
+
+.home-left h1 {
+  margin-bottom: 0.75rem;
+  color: var(--dark-purple);
+}
+
+.home-left p {
+  max-width: 55ch;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.home-right {
+  background-color: var(--light-pink);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.latest-work-label {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--light-purple);
+  margin-bottom: 0.75rem;
+}
+
+.home-right img {
+  max-width: 100%;
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.home-right h2 {
+  margin-bottom: 1rem;
+  color: var(--dark-purple);
+}
+
+/* Log-project form */
+.project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 480px;
+}
+
+.project-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.project-form input[type="text"],
+.project-form select,
+.project-form textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-weight: normal;
+}
+
+.project-form textarea {
+  resize: vertical;
+}
+
+.field-group-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.status-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.status-row input {
+  flex: 1;
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.remove-row-btn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.4rem;
+}
+
+.remove-row-btn:hover {
+  color: #c0392b;
+}
+
+.image-preview {
+  max-width: 220px;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+/* Create/Edit project modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3000;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 520px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #999;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+.field-hint {
+  font-weight: normal;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
