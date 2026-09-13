@@ -1,6 +1,10 @@
+// js/main.js
+// Shared logic that runs on every page
+
 document.addEventListener('DOMContentLoaded', () => {
   loadNavbar();
   setFooterYear();
+  initImageZoom();
 });
 
 function loadNavbar() {
@@ -41,3 +45,39 @@ function setFooterYear() {
   const yearEl = document.querySelector('#current-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 }
+
+function initImageZoom() {
+  const images = document.querySelectorAll('main img');
+  if (!images.length) return;
+
+  let overlay = document.querySelector('.image-overlay');
+  let overlayImg;
+
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'image-overlay';
+    overlayImg = document.createElement('img');
+    overlay.appendChild(overlayImg);
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', () => overlay.classList.remove('open'));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') overlay.classList.remove('open');
+    });
+  } else {
+    overlayImg = overlay.querySelector('img');
+  }
+
+  images.forEach(img => {
+    if (img.dataset.zoomBound) return; // avoid double-binding on re-render
+    img.dataset.zoomBound = 'true';
+    img.addEventListener('click', () => {
+      overlayImg.src = img.src;
+      overlayImg.alt = img.alt;
+      overlay.classList.add('open');
+    });
+  });
+}
+
+// exposed so page-specific scripts can re-run it after inserting new images
+window.initImageZoom = initImageZoom;

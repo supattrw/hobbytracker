@@ -11,8 +11,19 @@
   <div id="navbar-placeholder"></div>
 
   <main>
-    <h1>Welcome to Hobby Tracker</h1>
-    <p>Track your hobbies, save funny ideas to try, and keep your personal "how to" notes all in one place.</p>
+    <div class="page-content">
+      <div class="home-layout">
+        <div class="home-left">
+          <h1>Welcome to Hobby Tracker</h1>
+          <p>Track your hobbies, save funny ideas to try, and keep your personal "how to" notes all in one place.</p>
+          <button type="button" id="upload-latest-btn" class="primary-btn">Upload latest project</button>
+        </div>
+
+        <div class="home-right" id="latest-work-card">
+          <!-- filled in dynamically by home-page.js -->
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -20,6 +31,7 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/project-modal.js"></script>
   <script src="js/home-page.js"></script>
 </body>
 </html>
