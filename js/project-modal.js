@@ -44,6 +44,11 @@ function ensureModalExists() {
         </label>
 
         <label>
+          How to
+          <textarea id="modal-howto-input" rows="5" placeholder="How to make this project..." ></textarea>
+        </label>
+
+        <label>
           Photo <span id="modal-photo-hint" class="field-hint"></span>
           <input type="file" id="modal-image-input" accept="image/*">
         </label>
@@ -102,6 +107,7 @@ function openProjectModal(options = {}) {
   const categorySelect = overlay.querySelector('#modal-category-select');
   const titleInput = overlay.querySelector('#modal-title-input');
   const descInput = overlay.querySelector('#modal-description-input');
+  const howtoInput = overlay.querySelector('#modal-howto-input');
   const statusRows = overlay.querySelector('#modal-status-rows');
   const imageInput = overlay.querySelector('#modal-image-input');
   const imagePreview = overlay.querySelector('#modal-image-preview');
@@ -109,6 +115,7 @@ function openProjectModal(options = {}) {
   const submitBtn = overlay.querySelector('#modal-submit-btn');
 
   statusRows.innerHTML = '';
+  howtoInput.value = '';
   imageInput.value = '';
   imagePreview.style.display = 'none';
   submitBtn.disabled = false;
@@ -120,6 +127,7 @@ function openProjectModal(options = {}) {
     categorySelect.disabled = true;
     titleInput.value = existing?.title || '';
     descInput.value = existing?.description || '';
+    howtoInput.value = existing?.howto || '';
     (existing?.status || []).forEach(item => addModalStatusRow(item.label, item.value));
     if (!existing?.status?.length) { addModalStatusRow(); addModalStatusRow(); }
     imageInput.required = false;
@@ -136,6 +144,7 @@ function openProjectModal(options = {}) {
     categorySelect.value = category || '';
     titleInput.value = '';
     descInput.value = '';
+    howtoInput.value = '';
     addModalStatusRow();
     addModalStatusRow();
     imageInput.required = true;
@@ -165,6 +174,7 @@ async function handleModalSubmit(e) {
   const category = overlay.querySelector('#modal-category-select').value;
   const title = overlay.querySelector('#modal-title-input').value.trim();
   const description = overlay.querySelector('#modal-description-input').value.trim();
+  const howto = overlay.querySelector('#modal-howto-input').value.trim();
   const file = overlay.querySelector('#modal-image-input').files[0];
   const submitBtn = overlay.querySelector('#modal-submit-btn');
 
@@ -184,7 +194,7 @@ async function handleModalSubmit(e) {
   submitBtn.textContent = 'Saving...';
 
   try {
-    const payload = { category, title, status, description, imagePath: file ? file.path : null };
+    const payload = { category, title, status, description, howto, imagePath: file ? window.projectAPI.getFilePath(file) : null,};
     const updated = modalMode === 'edit'
       ? await window.projectAPI.updateProject(payload)
       : await window.projectAPI.saveProject(payload);

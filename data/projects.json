@@ -1,26 +1,76 @@
 {
   "crochet": {
     "latest": {
-      "title": "This is my latest work",
+      "title": "Bandana",
       "status": [
-        { "label": "Time", "value": "2-3 weeks" },
-        { "label": "Needle", "value": "2.0mm" },
-        { "label": "Color", "value": "off-white" },
-        { "label": "Yarn", "value": "probably 4/4" },
-        { "label": "Rating", "value": "4/5" }
+        {
+          "label": "Time",
+          "value": "1 week"
+        }
       ],
-      "description": "I used around 2-3 weeks with this. Just worked on it whenever I could, or wanted to. It was so much joy once I remembered all the sequences. I played chicken with this yarn as well \u2014 since I bought it from Fretex, I didn't have extra yarn for this, but it ended up with a decent length so I'm satisfied!",
+      "description": "This was so fun actually, love it! a bit hard to use tho..",
+      "howto": "follow pattern",
       "image": "assets/crochet/belt.jpg",
-      "date": "2026-09-10T00:00:00.000Z"
+      "date": "2026-09-14T13:17:15.968Z"
     },
     "history": [
-      { "image": "assets/crochet/bandana.jpg", "title": "Bandana" },
-      { "image": "assets/crochet/airpod-bag.jpg", "title": "Airpod case" },
-      { "image": "assets/crochet/yarn-bag.jpg", "title": "Yarn storage bag" },
-      { "image": "assets/crochet/cat.jpg", "title": "Cat, mini try-out" }
+      {
+        "title": "This is my latest work",
+        "status": [
+          {
+            "label": "Time",
+            "value": "2-3 weeks"
+          },
+          {
+            "label": "Needle",
+            "value": "2.0mm"
+          },
+          {
+            "label": "Color",
+            "value": "off-white"
+          },
+          {
+            "label": "Yarn",
+            "value": "probably 4/4"
+          },
+          {
+            "label": "Rating",
+            "value": "4/5"
+          }
+        ],
+        "description": "I used around 2-3 weeks with this. Just worked on it whenever I could, or wanted to. It was so much joy once I remembered all the sequences. I played chicken with this yarn as well — since I bought it from Fretex, I didn't have extra yarn for this, but it ended up with a decent length so I'm satisfied!",
+        "howto": "just follow the pattern actually...",
+        "image": "assets/crochet/belt.jpg",
+        "date": "2026-09-14T12:32:48.356Z"
+      }
     ]
   },
-  "nails-art": { "latest": null, "history": [] },
-  "ceramic": { "latest": null, "history": [] },
-  "accessories-making": { "latest": null, "history": [] }
+  "nails-art": {
+    "latest": {
+      "title": "One Piece, Law",
+      "status": [
+        {
+          "label": "Time",
+          "value": "10-12 hours"
+        },
+        {
+          "label": "Type",
+          "value": "Gel"
+        }
+      ],
+      "description": "It took me looonggggg time to do this. I redo multiple of the design as well.. exhauted and dont know when should i use this...",
+      "howto": "1. find inspirations\n2. select the correct fake nail size for each of your nails\n3. polish, primer, base gel, draw, top coat",
+      "image": "files/nails-art/1789393646374.jpg",
+      "date": "2026-09-14T13:47:26.392Z"
+    },
+    "history": []
+  },
+  "ceramic": {
+    "latest": null,
+    "history": []
+  },
+  "accessories-making": {
+    "latest": null,
+    "history": []
+  }
 }

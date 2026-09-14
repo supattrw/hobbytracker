@@ -43,7 +43,7 @@ ipcMain.handle('get-projects', () => {
 });
 
 ipcMain.handle('save-project', (event, payload) => {
-  const { category, title, status, description, imagePath } = payload;
+  const { category, title, status, description, howto, imagePath } = payload;
   const projects = loadProjects();
 
   if (!projects[category]) {
@@ -70,6 +70,7 @@ ipcMain.handle('save-project', (event, payload) => {
     title,
     status,
     description,
+    howto,
     image: savedImagePath,
     date: new Date().toISOString(),
   };
@@ -80,7 +81,7 @@ ipcMain.handle('save-project', (event, payload) => {
 
 // Edits the CURRENT latest project in place — does not push anything into history.
 ipcMain.handle('update-project', (event, payload) => {
-  const { category, title, status, description, imagePath } = payload;
+  const { category, title, status, description, howto, imagePath } = payload;
   const projects = loadProjects();
 
   if (!projects[category] || !projects[category].latest) {
@@ -102,6 +103,7 @@ ipcMain.handle('update-project', (event, payload) => {
     title,
     status,
     description,
+    howto,
     image: savedImagePath,
     date: new Date().toISOString(),
   };

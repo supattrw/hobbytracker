@@ -35,12 +35,14 @@ function renderProjectPage(data) {
   const titleEl = document.querySelector('.project-details h1');
   const statusListEl = document.querySelector('.project-details ul');
   const descEl = document.querySelector('.project-details p');
+  const howtoEl = document.querySelector('.project-details .how-to');
   const galleryEl = document.querySelector('.image-container');
   const editBtn = document.querySelector('#edit-project-btn');
 
   if (!data || !data.latest) {
     titleEl.textContent = 'No project logged yet';
-    descEl.textContent = 'Click "Upload latest project" on the home page to add your first one here.';
+    descEl.textContent = '';
+    if (howtoEl) howtoEl.textContent = '';
     imageEl.style.display = 'none';
     statusListEl.innerHTML = '';
     galleryEl.innerHTML = '';
@@ -53,6 +55,7 @@ function renderProjectPage(data) {
   imageEl.style.display = 'block';
   titleEl.textContent = data.latest.title;
   descEl.textContent = data.latest.description;
+  if (howtoEl) howtoEl.textContent = data.latest.howto || '';
   if (editBtn) editBtn.style.display = 'inline-block';
 
   statusListEl.innerHTML = '';
@@ -69,6 +72,8 @@ function renderProjectPage(data) {
     img.alt = item.title || '';
     galleryEl.appendChild(img);
   });
+
+  
 
   // newly-inserted images need the click-to-enlarge listener attached
   if (window.initImageZoom) window.initImageZoom();
