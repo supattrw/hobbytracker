@@ -18,8 +18,8 @@ function ensureModalExists() {
       <form id="modal-project-form" class="project-form">
         <label id="modal-category-label">
           Which hobby is this?
-          <select id="modal-category-select" required style="color:var(--light-purple)">
-            <option value="" disabled selected >Choose a category</option>
+          <select id="modal-category-select" required>
+            <option value="" disabled selected>Choose a category</option>
             <option value="crochet">Crochet</option>
             <option value="nails-art">Nails Art</option>
             <option value="ceramic">Ceramic</option>
@@ -33,19 +33,19 @@ function ensureModalExists() {
         </label>
 
         <div class="status-fields">
-          <p class="field-group-label" style="color:var(--dark-purple)">Status</p>
+          <p class="field-group-label">Status</p>
           <div id="modal-status-rows"></div>
           <button type="button" id="modal-add-status-row" class="secondary-btn">+ Add status field</button>
         </div>
 
         <label>
           Description
-          <textarea id="modal-description-input" rows="5" placeholder="Tell the story behind this project..." required></textarea>
+          <textarea id="modal-description-input" rows="2" placeholder="Tell the story behind this project..." required></textarea>
         </label>
 
         <label>
           How to
-          <textarea id="modal-howto-input" rows="5" placeholder="How to make this project..." ></textarea>
+          <textarea id="modal-howto-input" rows="4" placeholder="How to make this project..."></textarea>
         </label>
 
         <label>
@@ -194,7 +194,7 @@ async function handleModalSubmit(e) {
   submitBtn.textContent = 'Saving...';
 
   try {
-    const payload = { category, title, status, description, howto, imagePath: file ? window.projectAPI.getFilePath(file) : null,};
+    const payload = { category, title, status, description, howto, imagePath: file ? window.projectAPI.getFilePath(file) : null };
     const updated = modalMode === 'edit'
       ? await window.projectAPI.updateProject(payload)
       : await window.projectAPI.saveProject(payload);

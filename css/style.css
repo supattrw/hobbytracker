@@ -4,11 +4,11 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    --dark-purple: #D56989;
-    --light-purple: #C2DC80;
-    --dark-pink: #EA9CAF;
-    --light-pink: #FFE6E6;
-    --off-white: #F3EEF1; 
+    --dark-green: #8E9A5A;
+    --cherry-red: #E24B5A;
+    --light-cherry: #F06C78;
+    --light-pink: #F9C3CB;
+    --off-white: #F7EBDF; 
 }
 body { font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; line-height: 1.0; background-color: var(--off-white);}
 
@@ -32,7 +32,7 @@ body { font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; lin
 }
 
 .nav-link {
-  color: var(--light-purple);
+  color: var(--cherry-red);
   text-decoration: none;
   padding: 2px 6px;
   border-radius: 12px;
@@ -40,12 +40,11 @@ body { font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; lin
 }
 
 .nav-link:hover {
-  color: var(--dark-purple);
-  background-color: var(--light-pink);
+  color: var(--dark-green);
 }
 
 .nav-link.active {
-  color: var(--dark-pink);
+  color: var(--dark-green);
   font-weight: bold;
 }
 
@@ -53,7 +52,7 @@ body { font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; lin
   display: none;
   background: none;
   border: none;
-  color: var(--light-purple);
+  color: var(--cherry-red);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -67,7 +66,7 @@ body { font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; lin
     position: absolute;
     top: 60px;
     right: 0;
-    background: #222;
+    background: var(--cherry-red);
     width: 200px;
   }
   .nav-links.open { display: flex; }
@@ -75,7 +74,7 @@ body { font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; lin
 }
 
 main { padding: 2rem; }
-footer { padding: 1rem 2rem; text-align: center; color: #777; }
+footer { padding: 1rem 2rem; text-align: center; color: var(--cherry-red); }
 
 .page-content {
   display: flex;
@@ -108,14 +107,14 @@ footer { padding: 1rem 2rem; text-align: center; color: #777; }
   font-size: 1.9rem;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  color: var(--dark-purple);
+  color: var(--dark-green);
 }
 
 .project-details h2 {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--light-purple);
+  color: var(--cherry-red);
   margin-bottom: 0.75rem;
 }
 
@@ -127,13 +126,14 @@ footer { padding: 1rem 2rem; text-align: center; color: #777; }
 .project-details ul li {
   padding: 0.3rem 0;
   border-bottom: 1px solid var(--light-pink);
+  color: var(--dark-green);
   max-width: 32ch;
 }
 
 .project-details p {
   max-width: 60ch;
   line-height: 1.7;
-  color: #333;
+  color: var(--dark-green);
   margin-bottom: 1.5rem;
 }
 
@@ -195,13 +195,13 @@ main img {
 }
 
 .primary-btn {
-  background-color: var(--light-purple);
-  color: #fff;
+  background-color: var(--cherry-red);
+  color: var(--off-white);
   padding: 0.7rem 1.4rem;
 }
 
 .primary-btn:hover {
-  background-color: var(--dark-purple);
+  background-color: var(--dark-green);
 }
 
 .primary-btn:disabled {
@@ -210,14 +210,13 @@ main img {
 }
 
 .secondary-btn {
-  background-color: transparent;
-  color: var(--dark-purple);
-  border: 1px solid var(--light-purple);
+  background-color: var(--light-cherry);
+  color: var(--off-white);
   padding: 0.5rem 1rem;
 }
 
 .secondary-btn:hover {
-  background-color: var(--light-pink);
+  background-color: var(--dark-green);
 }
 
 /* Homepage layout */
@@ -244,7 +243,7 @@ main img {
 
 .home-left h1 {
   margin-bottom: 0.75rem;
-  color: var(--dark-purple);
+  color: var(--dark-green);
 }
 
 .home-left p {
@@ -264,7 +263,7 @@ main img {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--light-purple);
+  color: var(--cherry-red);
   margin-bottom: 0.75rem;
 }
 
@@ -280,7 +279,7 @@ main img {
 
 .home-right h2 {
   margin-bottom: 1rem;
-  color: var(--dark-purple);
+  color: var(--dark-green);
 }
 
 /* Log-project form */
@@ -296,7 +295,7 @@ main img {
   flex-direction: column;
   gap: 0.4rem;
   font-weight: 600;
-  color: #333;
+  color: var(--cherry-red);
 }
 
 .project-form input[type="text"],
@@ -305,7 +304,7 @@ main img {
   font-family: inherit;
   font-size: 1rem;
   padding: 0.6rem 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--light-pink);
   border-radius: 8px;
   font-weight: normal;
 }
@@ -316,7 +315,7 @@ main img {
 
 .field-group-label {
   font-weight: 600;
-  color: #333;
+  color: var(--cherry-red);
   margin-bottom: 0.5rem;
 }
 
@@ -330,15 +329,15 @@ main img {
   flex: 1;
   font-family: inherit;
   font-size: 0.95rem;
-  padding: 0.5rem 0.6rem;
-  border: 1px solid #ddd;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--light-pink);
   border-radius: 8px;
 }
 
 .remove-row-btn {
   background: none;
   border: none;
-  color: #999;
+  color: var(--cherry-red);
   font-size: 1.3rem;
   line-height: 1;
   cursor: pointer;
@@ -346,7 +345,7 @@ main img {
 }
 
 .remove-row-btn:hover {
-  color: #c0392b;
+  color: var(--dark-green);
 }
 
 .image-preview {
@@ -372,7 +371,7 @@ main img {
 }
 
 .modal-box {
-  background: #fff;
+  background: var(--off-white);
   border-radius: 12px;
   padding: 2rem;
   max-width: 520px;
@@ -380,6 +379,66 @@ main img {
   max-height: 85vh;
   overflow-y: auto;
   position: relative;
+}
+
+/* Modal color overrides — scoped to .modal-box so nothing else on the site is affected */
+
+.modal-box {
+  background-color: var(--off-white);
+}
+
+.modal-box #modal-title {
+  color: var(--cherry-red);
+}
+
+.modal-box .project-form label {
+  color: var(--dark-green);
+}
+
+.modal-box .field-group-label {
+  color: var(--dark-green);
+}
+
+.modal-box .project-form input[type="text"],
+.modal-box .project-form select,
+.modal-box .project-form textarea,
+.modal-box .status-row input {
+  background-color: #fff;
+  color: var(--dark-green);
+  border-color: var(--light-cherry);
+}
+
+.modal-box .project-form select {
+  color: var(--cherry-red);
+}
+
+.modal-box .field-hint {
+  color: var(--light-cherry);
+}
+
+.modal-box .primary-btn {
+  background-color: var(--cherry-red);
+}
+
+.modal-box .primary-btn:hover {
+  background-color: var(--dark-green);
+}
+
+.modal-box .secondary-btn {
+  color: var(--off-white);
+  border-color: var(--cherry-red);
+}
+
+.modal-box .secondary-btn:hover {
+  background-color: var(--dark-green);
+}
+
+.modal-box .modal-close:hover {
+  color: var(--cherry-red);
+}
+
+.modal-box .remove-row-btn:hover {
+  color: var(--cherry-red);
 }
 
 .modal-close {
@@ -391,17 +450,17 @@ main img {
   font-size: 1.5rem;
   line-height: 1;
   cursor: pointer;
-  color: #999;
+  color: var(--cherry-red);
 }
 
 .modal-close:hover {
-  color: #333;
+  color: var(--dark-green);
 }
 
 .field-hint {
   font-weight: normal;
   font-size: 0.85rem;
-  color: #999;
+  color: var(--light-cherry);
 }
 
 body.modal-open {
